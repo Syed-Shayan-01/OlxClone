@@ -1,9 +1,9 @@
 
 
-const Button = () => {
+const Button = ({btnxt}) => {
   return (
-    <div>
-        
+    <div className="py-1 ">
+        {btnxt}
     </div>
   )
 }

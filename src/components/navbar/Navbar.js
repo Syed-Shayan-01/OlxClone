@@ -8,8 +8,9 @@ import {
   AiOutlineSearch,
 } from "react-icons/ai";
 import Link from "next/link";
-import { BsBuildings } from "react-icons/bs";
+import { BsBuildings, BsPlus } from "react-icons/bs";
 import { LiaCarSolid } from "react-icons/lia";
+import Button from "../button/Button";
 const Navbar = () => {
   const [open, setopen] = useState(false);
   return (
@@ -93,17 +94,21 @@ const Navbar = () => {
           />
           <input
             type="search"
-            name="default-Search"
+            name="search"
             id="search"
-            className="border-black border-[2px]
+            className="border-black  border-[2px]
                       py-2 pl-4 w-[40rem]  focus:outline-teal-500 rounded-l-md"
           />
           <span className=" bg-black py-3 text-white text-2xl font-bold px-3  cursor-pointer">
             <AiOutlineSearch />
           </span>
         </div>
-        <div className="md:ml-4 md:font-bold font-sans">
-            <List itemtxt={'Login'} />
+        <div className=" md:font-bold font-sans">
+          <Button btnxt={'Login'} />
+        </div>
+        <div className=" flex items-center md:font-bold font-sans border-[5px] rounded-3xl
+         border-b-blue-500 border-r-blue-500 border-t-teal-500 border-l-yellow-400">
+         <BsPlus className="text-3xl font-bold" /> <Button btnxt={"Sell"} />
         </div>
       </nav>
     </>
